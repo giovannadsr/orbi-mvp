@@ -1,0 +1,45 @@
+name: Nova funcionalidade
+description: Propor ou acompanhar uma melhoria do Orbi
+title: "[FEAT] "
+labels: ["feature"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema ou oportunidade
+      description: Que necessidade do usuário esta tarefa atende?
+      placeholder: Descreva o contexto.
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Solução proposta
+      placeholder: O que será implementado?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Critérios de aceite
+      description: Liste condições verificáveis para considerar a tarefa concluída.
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Prioridade
+      options:
+        - Alta
+        - Média
+        - Baixa
+    validations:
+      required: true
+  - type: input
+    id: assignee_hint
+    attributes:
+      label: Responsável sugerido
+      placeholder: Giovanna ou Marcos

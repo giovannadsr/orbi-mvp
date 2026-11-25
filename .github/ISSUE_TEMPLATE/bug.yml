@@ -1,0 +1,29 @@
+name: Relatar problema
+description: Registrar um erro encontrado no MVP
+title: "[BUG] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Como reproduzir
+      placeholder: Passo a passo para encontrar o problema.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamento esperado
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Comportamento observado
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Navegador e ambiente
+      placeholder: Ex. Chrome no Windows 11

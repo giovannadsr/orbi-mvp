@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10172a">
+  <title>Orbi — Aprenda no seu ritmo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="Orbi início"><span class="brand-mark">o</span><span>orbi<span class="brand-dot">.</span></span></a>
+      <p class="side-label">MENU</p>
+      <button class="nav-link active" data-view="home"><span>⌂</span> Início</button>
+      <button class="nav-link" data-view="catalog"><span>▦</span> Explorar conteúdos</button>
+      <button class="nav-link" data-view="progress"><span>◷</span> Meu progresso</button>
+      <div class="sidebar-bottom">
+        <div class="mini-note"><span class="spark">✦</span><b>Um pouco por dia.</b><p>Pequenos passos também são progresso.</p></div>
+        <button id="logoutBtn" class="logout">↪ Sair da conta</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div><span class="eyebrow">SEU ESPAÇO DE APRENDIZAGEM</span><h1 id="pageTitle">Início</h1></div>
+        <div class="profile"><div class="avatar" id="avatar">O</div><div><b id="userName">Visitante</b><small>Explorador(a)</small></div></div>
+      </header>
+
+      <section id="authView" class="auth-view hidden">
+        <div class="auth-card">
+          <div class="brand auth-brand"><span class="brand-mark">o</span><span>orbi<span class="brand-dot">.</span></span></div>
+          <span class="eyebrow">CONHECIMENTO NO SEU RITMO</span>
+          <h2 id="authTitle">Boas-vindas ao Orbi</h2>
+          <p class="muted">Crie seu espaço de aprendizagem e descubra assuntos que despertam sua curiosidade.</p>
+          <form id="authForm">
+            <label>Seu nome<input id="nameInput" autocomplete="name" placeholder="Como podemos chamar você?"></label>
+            <label>E-mail<input id="emailInput" type="email" required autocomplete="email" placeholder="voce@email.com"></label>
+            <label>Senha<input id="passwordInput" type="password" required minlength="4" autocomplete="current-password" placeholder="Mínimo de 4 caracteres"></label>
+            <button class="primary full" type="submit" id="authSubmit">Começar minha jornada</button>
+          </form>
+          <button id="toggleAuth" class="text-button">Já tenho uma conta. Entrar</button>
+          <p class="demo-disclaimer">Versão acadêmica demonstrativa: os dados ficam salvos somente neste navegador. Não use senha real.</p>
+        </div>
+      </section>
+
+      <section id="onboardingView" class="content hidden">
+        <div class="welcome-panel"><span class="eyebrow">PRIMEIRO PASSO</span><h2>O que desperta sua curiosidade?</h2><p>Escolha pelo menos um tema. Você poderá mudar suas escolhas depois.</p></div>
+        <div id="interestOptions" class="interest-grid"></div>
+        <button id="saveInterests" class="primary">Salvar meus interesses <span>→</span></button>
+      </section>
+
+      <section id="homeView" class="content">
+        <div class="hero">
+          <div><span class="eyebrow light">SEU PRÓXIMO DESCOBRIMENTO COMEÇA AQUI</span><h2 id="greeting">Olá!<br>O que vamos descobrir hoje?</h2><p>Aprenda um pouco, no tempo que você tem.</p><button class="hero-button" data-go="catalog">Explorar conteúdos <span>→</span></button></div>
+          <div class="hero-orbit"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="planet">✦</div><span class="orbit-label">curiosidade<br>em movimento</span></div>
+        </div>
+        <div class="section-heading"><div><span class="eyebrow">CONTINUE DE ONDE PAROU</span><h2>Em andamento</h2></div><button class="text-button" data-go="progress">Ver progresso →</button></div>
+        <div id="continueList" class="course-grid"></div>
+        <div class="section-heading"><div><span class="eyebrow">FEITO PARA VOCÊ</span><h2>Talvez você goste</h2></div><button class="text-button" data-go="catalog">Ver catálogo →</button></div>
+        <div id="recommendedList" class="course-grid"></div>
+      </section>
+
+      <section id="catalogView" class="content hidden">
+        <div class="intro-row"><div><span class="eyebrow">DESCUBRA ALGO NOVO</span><h2>Explore conteúdos</h2><p class="muted">Escolha um tema e comece no seu ritmo.</p></div><input id="searchInput" class="search" placeholder="⌕  Buscar conteúdo..." aria-label="Buscar conteúdo"></div>
+        <div id="categoryFilters" class="filters"></div>
+        <div id="catalogList" class="course-grid"></div>
+      </section>
+
+      <section id="detailView" class="content hidden">
+        <button class="back-button" data-go="catalog">← Voltar aos conteúdos</button>
+        <div id="detailContent"></div>
+      </section>
+
+      <section id="progressView" class="content hidden">
+        <div class="progress-summary"><div><span class="eyebrow">SUA JORNADA</span><h2>Seu progresso</h2><p class="muted">Cada etapa concluída conta.</p></div><div class="progress-ring" id="progressRing"><strong id="progressPercent">0%</strong><small>concluído</small></div></div>
+        <div class="stats" id="stats"></div>
+        <div class="section-heading"><div><span class="eyebrow">SEU HISTÓRICO</span><h2>Meus conteúdos</h2></div></div>
+        <div id="progressList" class="course-grid"></div>
+      </section>
+      <footer>ORBI <span>·</span> Aprender também é explorar.</footer>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
