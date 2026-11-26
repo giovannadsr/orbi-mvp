@@ -67,7 +67,7 @@ $("#authForm").addEventListener("submit",e=>{e.preventDefault();const email=$("#
 function setAuthMode(register){state.register=register;$("#nameInput").parentElement.classList.toggle("hidden",!register);$("#authTitle").textContent=register?"Boas-vindas ao Orbi":"Que bom ter você de volta";$("#authSubmit").textContent=register?"Começar minha jornada":"Entrar";$("#toggleAuth").textContent=register?"Já tenho uma conta. Entrar":"Ainda não tenho conta. Criar cadastro"};
 $("#toggleAuth").addEventListener("click",()=>setAuthMode(!state.register));
 $("#saveInterests").addEventListener("click",()=>{if(!interests().length){toast("Escolha pelo menos um tema.");return}showView("home");toast("Interesses salvos!")});
-$("#logoutBtn").addEventListener("click",()=>{state.user=null;localStorage.removeItem("orbi-session");showView("auth");setAuthMode(false);$("#passwordInput").value=""});
+$("#logoutBtn").addEventListener("click",()=>{state.user=null;$("#userName").textContent="Visitante";$("#avatar").innerHTML="<svg width=\"19\" height=\"19\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"8\" r=\"3.5\"/><path d=\"M5 20v-1.5a7 7 0 0 1 14 0V20\"/></svg>";$("#logoutBtn").classList.add("hidden");localStorage.removeItem("orbi-session");showView("auth");setAuthMode(false);$("#passwordInput").value=""});
 document.querySelectorAll(".nav-link").forEach(b=>b.addEventListener("click",()=>showView(b.dataset.view)));
 $("#searchInput").addEventListener("input",renderCatalog);
 setAuthMode(true);
