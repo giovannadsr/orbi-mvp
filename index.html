@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#10172a">
   <title>Orbi — Aprenda no seu ritmo</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="app-shell">
     <aside class="sidebar">
-      <a class="brand" href="#" aria-label="Orbi início"><span class="brand-mark">o</span><span>orbi<span class="brand-dot">.</span></span></a>
+      <a class="brand" href="#" aria-label="Orbi início"><svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M26 9.5 A13 13 0 1 0 32 19" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/><circle cx="32.5" cy="9" r="3.5" fill="currentColor"/></svg><span>orbi<span class="brand-dot">.</span></span></a>
       <p class="side-label">MENU</p>
       <button class="nav-link active" data-view="home"><span>⌂</span> Início</button>
       <button class="nav-link" data-view="catalog"><span>▦</span> Explorar conteúdos</button>
@@ -29,7 +30,7 @@
 
       <section id="authView" class="auth-view hidden">
         <div class="auth-card">
-          <div class="brand auth-brand"><span class="brand-mark">o</span><span>orbi<span class="brand-dot">.</span></span></div>
+          <div class="brand auth-brand"><svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M26 9.5 A13 13 0 1 0 32 19" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/><circle cx="32.5" cy="9" r="3.5" fill="currentColor"/></svg><span>orbi<span class="brand-dot">.</span></span></div>
           <span class="eyebrow">CONHECIMENTO NO SEU RITMO</span>
           <h2 id="authTitle">Boas-vindas ao Orbi</h2>
           <p class="muted">Crie seu espaço de aprendizagem e descubra assuntos que despertam sua curiosidade.</p>
@@ -73,9 +74,9 @@
       </section>
 
       <section id="progressView" class="content hidden">
-        <div class="progress-summary"><div><span class="eyebrow">SUA JORNADA</span><h2>Seu progresso</h2><p class="muted">Cada etapa concluída conta.</p></div><div class="progress-ring" id="progressRing"><strong id="progressPercent">0%</strong><small>concluído</small></div></div>
+        <div class="progress-summary"><div><span class="eyebrow">SUA JORNADA</span><h2>Resumo do seu aprendizado</h2><p class="muted">Acompanhe os conteúdos que você começou e concluiu, no seu ritmo.</p></div></div>
         <div class="stats" id="stats"></div>
-        <div class="section-heading"><div><span class="eyebrow">SEU HISTÓRICO</span><h2>Meus conteúdos</h2></div></div>
+        <div class="section-heading"><div><span class="eyebrow">SEU HISTÓRICO</span><h2>Histórico de aprendizado</h2></div></div>
         <div id="progressList" class="course-grid"></div>
       </section>
       <footer>ORBI <span>·</span> Aprender também é explorar.</footer>
